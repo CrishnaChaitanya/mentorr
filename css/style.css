@@ -29,6 +29,10 @@ body {
   margin-left: 85px;
 }
 
+a:hover{
+  text-decoration: none !important;
+}
+
 .navbar-links {
   height: 100%;
 }
