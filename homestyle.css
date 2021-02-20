@@ -195,7 +195,7 @@ button {
   position: relative;
   height: 60px;
   width: 200px;
-  margin: 10px 120px;
+  margin: 10px 120px !important;
   border-radius: 10px;
   border: none;
   outline: none;
