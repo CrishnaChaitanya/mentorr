@@ -1,0 +1,366 @@
+body {
+  margin: 0px !important;
+  text-decoration: none;
+}
+.navbar {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  color: rgb(0, 174, 255);
+}
+
+.brand-title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+
+  margin-left: 85px;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  font-family: monospace;
+  font-weight: 600;
+}
+.navbar-links ul li:last-child {
+  margin-right: 60px;
+}
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+.colour {
+  color: #651fff;
+}
+
+.main-title {
+  font-weight: bold;
+}
+
+.navbar-container {
+  background-color: #00bfff;
+  color: white;
+  height: 80px;
+  width: 100%;
+  margin: 0px;
+  align-items: center;
+  padding: 10px;
+  padding-top: 20px;
+  position: fixed;
+  z-index: 1;
+}
+
+.main-title {
+  margin: 0px;
+}
+
+/* Domains */
+.container {
+  overflow: wrap;
+  position: relative;
+  top: 100px;
+  /* z-index: -1; */
+}
+
+.domain-container {
+  box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6,
+    4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+  margin: 30px;
+}
+
+.domain-container > h3,
+.domain-container > a > h3 {
+  margin: 20px;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.domain-container > a > h3,
+.domain-container > h3 {
+  color: #651fff;
+}
+
+.domain-container > p {
+  margin: 20px;
+}
+/* 
+.domain-container:hover{
+    background-color: #00bfff;
+    color: white;
+} */
+
+.hide {
+  visibility: hidden;
+}
+
+.roadmap {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  bottom: 100px;
+  z-index: -99;
+}
+
+.pin {
+  font-size: 80px;
+  color: #651fff;
+  position: relative;
+  top: 155px;
+  left: 81px;
+}
+
+map {
+  width: 200px;
+  height: 200px;
+}
+
+button {
+  border-radius: 10px;
+  color: white;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border: 0px;
+  outline: none !important;
+}
+
+.html-button {
+  position: relative;
+  top: 177px;
+  left: 26px;
+  border-radius: 30px;
+}
+
+.css-button {
+  position: relative;
+  left: 163px;
+  top: 177px;
+  border-radius: 30px;
+}
+
+.js-button {
+  position: relative;
+  top: 177px;
+  left: 300px;
+  border-radius: 30px;
+}
+
+.frame-button {
+  position: relative;
+  top: 177px;
+  left: 436px;
+  border-radius: 30px;
+}
+
+.boot-button {
+  position: relative;
+  top: 177px;
+  left: 573px;
+  border-radius: 30px;
+}
+
+.jquery-button {
+  position: relative;
+  top: 177px;
+  left: 710px;
+  border-radius: 30px;
+}
+
+.react-button {
+  position: relative;
+  top: 177px;
+  left: 983px;
+  border-radius: 30px;
+}
+
+.resources {
+  position: relative;
+  top: 391px;
+  left: 38px;
+}
+
+/* ============================================================== */
+.box {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: white;
+  font-family: "Montserrat", sans-serif;
+  transition: 1s box-shadow;
+}
+
+.box:hover {
+  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+}
+
+.box::before,
+.box::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 290px;
+  height: 270px;
+  background: #651fff;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.box::after {
+  background: #00bfff;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;
+  }
+}

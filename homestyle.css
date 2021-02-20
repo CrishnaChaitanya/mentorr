@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  color: rgb(0, 174, 255);
+}
+
+.brand-title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+
+  margin-left: 85px;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  font-family: monospace;
+  font-weight: 600;
+}
+.navbar-links ul li:last-child {
+  margin-right: 60px;
+}
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+/* for search bar */
+::selection {
+  color: #fff;
+  background: #664aff;
+}
+
+.wrapper {
+  max-width: 450px;
+  margin: 150px auto;
+}
+
+.wrapper .search-input {
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+.search-input input {
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input.active input {
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box {
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .autocom-box {
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li {
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .autocom-box li {
+  display: block;
+}
+.autocom-box li:hover {
+  background: #efefef;
+}
+
+.search-input .icon {
+  position: absolute;
+  right: 55px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: rgb(27, 152, 255);
+  cursor: pointer;
+}
+.quote {
+  text-align: center;
+  bottom: 50px;
+  font-family: "Bebas Neue", cursive;
+  font-size: xx-large;
+}
+
+/* buttons */
+/* button */
+button {
+  position: relative;
+  height: 60px;
+  width: 200px;
+  margin: 10px 120px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgb(78, 190, 255);
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.5s;
+  font-family: "Fira Code", monospace;
+  box-shadow: rgb(0 0 0 / 15%) 23.95px 23.95px 39.6px;
+}
+button:first-child:hover {
+  background: linear-gradient(90deg, #00bfff, #651fff, orange);
+  background-size: 400%;
+}
+button:nth-child(2) {
+  background: linear-gradient(90deg, #00bfff, #651fff, orange);
+  background-size: 400%;
+}
+button:last-child:hover {
+  background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+  background-size: 400%;
+}
+button:first-child:before,
+button:last-child:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+button:first-child:hover:before,
+button:last-child:hover:before {
+  opacity: 1;
+  z-index: -1;
+}
+button:hover {
+  z-index: 1;
+  animation: glow 8s linear infinite;
+}
+@keyframes glow {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+.line-1 {
+  height: 3px;
+  background: rgb(78, 1, 150);
+}
