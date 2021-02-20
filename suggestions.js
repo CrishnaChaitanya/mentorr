@@ -1,6 +1,6 @@
 //sugesstion for the search bar
 let suggestions = [
-    "Web Devlepment",
+    "WebDevlepment",
     "App Devlepment",
     "Cyber Security",
     "Machine Learning",
